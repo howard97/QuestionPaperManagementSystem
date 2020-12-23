@@ -1,0 +1,32 @@
+<!--Extend layout.html-->
+{% extends 'layout.html' %}
+
+<!--css block-->
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}  
+
+<!--Title Block-->
+{% block title %}
+    <title>Welcome</title>
+{% endblock %}
+
+<!--Main-section bloack-->
+{% block main_section %}
+    <section class="welcome-info">
+        <div class="section-wrapper">
+        <div class="message-section">
+            <h1 class="infor-head">Question Paper Management System</h1>
+            <h3>Where Lectures set exam Questions</h3>
+            <div class="btn-main">
+                <span class="btn-course"><a href="/course/create"><button>Create Courses</button></a></span>
+                <span class="btn-question"><a href="{{ url_for('find_course') }}"><button>Find Courses</button></a></span>
+            </div>
+        
+            <div class="article-div">
+                <h3>Set & Find all Courses and Questions in one place</h3>
+            </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
